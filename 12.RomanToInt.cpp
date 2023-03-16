@@ -1,0 +1,59 @@
+class Solution {
+public:
+    string intToRoman(int num) {
+        string r ="";
+        while(num>=1000){
+            r=r+"M";
+            num=num-1000;
+        }
+        if(num>=900){
+            r=r+"CM";
+            num=num-900;
+        }
+        while(num>=500){
+            r=r+"D";
+            num=num-500;
+        }
+        if(num>=400){
+            r=r+"CD";
+            num=num-400;
+        }
+        while(num>=100){
+            r=r+"C";
+            num=num-100;
+        }
+        if(num>=90){
+            r=r+"XC";
+            num=num-90;
+        }
+        while(num>=50){
+            r=r+"L";
+            num=num-50;
+        }
+        if(num>=40){
+            r=r+"XL";
+            num=num-40;
+        }
+        while(num>=10){
+            r=r+"X";
+            num=num-10;
+        }
+        if(num==9){
+            r=r+"IX";
+            num=num-9;
+        }
+        while(num>=5){
+            r=r+"V";
+            num=num-5;
+        }
+        if(num==4){
+            r=r+"IV";
+            num=num-4;
+        }
+        while(num>=1){
+            r=r+"I";
+            num=num-1;
+        }
+        return r;
+    }
+};
