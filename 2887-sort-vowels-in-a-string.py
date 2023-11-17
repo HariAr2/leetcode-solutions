@@ -1,4 +1,5 @@
 class Solution:
+    #fuction to check wether it is vowel or not
     def isVowel(self, c):
         return c in 'aeiouAEIOU'
 
@@ -10,6 +11,7 @@ class Solution:
             if self.isVowel(s[i]):
                 result += vowels[a]
                 a += 1
+                #appends the vowels in results and increments a
             else:
                 result += s[i]
         return result
